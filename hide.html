@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Function using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            // $("p").hide()
+            // $(this).hide() //current element
+            // $("*").hide() //hide all elements
+
+            //hide and show with the speed
+
+            $("p").hide(1000)
+            $("p").show(2000)
+        })
+
+    })
+</script>
+<body>
+    <div class="container">
+        <h2 id="head">This is heading </h2>
+        <p>This is the line to hide</p>
+        <button>Hide Text</button>
+    </div>
+</body>
+</html>

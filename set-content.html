@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set content using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                ($("#name").val(" Farooq "))
+            })
+            $("#btn2").click(function(){
+                ($("#study").html("I am <b>2nd year student</b> "))
+            })
+            $("#btn3").click(function(){
+                ($("#hobby").text("And Love to listen Music"))
+            })
+            })
+    </script>
+    <style>
+        p{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <p>Name <input type="text" id="name" value="Umar"></p>
+        <P id="study">I am undergraduate student.</P>
+        <P id="hobby">I Love to Code</P>
+        <button id="btn1">Reset Name</button>
+        <button id="btn2">Reset HTML</button>
+        <button id="btn3">Reset Value</button>
+
+    </div>
+
+</body>
+</html>

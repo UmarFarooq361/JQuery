@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadeTo using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeTo(1000,0.2);
+                $("#div2").fadeTo(1000,0.4);
+                $("#div3").fadeTo(1000,0.7);
+                $("#div4").fadeTo(1000,1);
+            })
+    
+        })
+    </script>
+    <style>
+        .circle{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            display: none;
+        }
+        p{
+            margin-top: 40%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <button>Fade Effect</button>
+        <div id="div1"class="circle"><p>one</p></div>
+        <div id="div2"class="circle"><p>Two</p></div>
+        <div id="div3"class="circle"><p>Three</p></div>
+        <div id="div4"class="circle"><p>Four</p></div>
+    </div>
+
+</body>
+</html>

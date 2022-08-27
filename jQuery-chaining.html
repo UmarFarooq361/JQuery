@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery chaining</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    
+
+    <script>
+        $(document).ready(function(){
+            $("#start").click(function(){
+                $("#animated").css("background","green")
+                .slideUp(2000)
+                .slideDown(2000,function(){ //callback function 
+                $("#animated").css("background","red")
+                })
+                })
+            })
+    </script>
+    <style>
+        #animated{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            position: absolute;
+        }
+        p{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <button id="start">Start</button>
+        <p id="animated">Chaining</p>
+    </div>
+
+</body>
+</html>
